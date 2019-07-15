@@ -7,6 +7,11 @@ const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".products-center");
+const banner = document.querySelector(".banner-btn")
+banner.addEventListener('click', scrollToForm())
+function scrollToForm() {
+    document.querySelector('.section-title').scrollIntoView({behavior: 'smooth'});
+  }
 let cart = []
 let buttonsDOM = []
 class Products {
