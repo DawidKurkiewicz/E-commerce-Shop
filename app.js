@@ -121,6 +121,8 @@ class UI {
         this.populateCart(cart);
         cartBtn.addEventListener("click", this.showCart);
         closeCartBtn.addEventListener("click", this.hideCart);
+        cartOverlay.addEventListener("click", this.hideCart);
+        cartDOM.addEventListener("click",e=>e.stopPropagation());
     }
     populateCart(cart) {
         cart.forEach(item => this.addCartItem(item));
